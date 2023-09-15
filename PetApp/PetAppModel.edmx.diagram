@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2c444ee9a2db444f9319bc05e893fea4" Name="Diagram1">
-        <EntityTypeShape EntityType="PetAppModel.Cliente" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PetAppModel.ClientesxMascotas" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PetAppModel.Mascota" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PetAppModel.Pesos" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PetAppModel.Usuarios" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="PetAppModel.Vacunas" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+      <Diagram DiagramId="19604c0ec4d8428f86c9116bfbaba21b" Name="Diagram1">
+        <EntityTypeShape EntityType="PetAppModel.Cliente" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" FillColor="Purple" />
+        <EntityTypeShape EntityType="PetAppModel.ClientesxMascotas" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" FillColor="Purple" />
+        <EntityTypeShape EntityType="PetAppModel.Mascota" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" FillColor="Purple" />
+        <EntityTypeShape EntityType="PetAppModel.Pesos" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" FillColor="Purple" />
+        <EntityTypeShape EntityType="PetAppModel.Usuarios" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" FillColor="Purple" />
+        <EntityTypeShape EntityType="PetAppModel.Vacunas" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" FillColor="Purple" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

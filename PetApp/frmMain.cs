@@ -37,5 +37,12 @@ namespace PetApp
             frmMantoUsuarios.MdiParent = this;
             frmMantoUsuarios.Show();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frmNewCustomer = new frmMantoUsuarios();
+            frmNewCustomer.MdiParent = this;
+            frmNewCustomer.Show();
+        }
     }
 }

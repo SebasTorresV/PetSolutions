@@ -41,6 +41,15 @@ namespace PetApp
 
             using (var db = new PetAppContext())
             {
+                // Verifica si el usuario con el correo electrónico proporcionado existe en la base de datos.
+                var usuarioExistente = db.Usuarios.FirstOrDefault(u => u.Email == username);
+
+                if (usuarioExistente == null)
+                {
+                    MessageBox.Show("El usuario con el correo electrónico proporcionado no existe.");
+                    return; // Sal del método si el usuario no existe.
+                }
+
                 // Crea parámetros para el procedimiento almacenado.
                 var option = new SqlParameter("@Option", 1);
                 var usernameParam = new SqlParameter("@Email", username);

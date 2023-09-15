@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtAlias = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtespecie = new System.Windows.Forms.TextBox();
-            this.txtRaza = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtColor = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dtFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtColor = new System.Windows.Forms.TextBox();
+            this.txtRaza = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtespecie = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtAlias = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -67,69 +67,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Mascota";
             // 
-            // txtAlias
+            // dtFechaNacimiento
             // 
-            this.txtAlias.Location = new System.Drawing.Point(6, 41);
-            this.txtAlias.Name = "txtAlias";
-            this.txtAlias.Size = new System.Drawing.Size(370, 20);
-            this.txtAlias.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Alias (Nombre)";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Especie";
-            // 
-            // txtespecie
-            // 
-            this.txtespecie.Location = new System.Drawing.Point(6, 81);
-            this.txtespecie.Name = "txtespecie";
-            this.txtespecie.Size = new System.Drawing.Size(370, 20);
-            this.txtespecie.TabIndex = 3;
-            // 
-            // txtRaza
-            // 
-            this.txtRaza.Location = new System.Drawing.Point(6, 121);
-            this.txtRaza.Name = "txtRaza";
-            this.txtRaza.Size = new System.Drawing.Size(370, 20);
-            this.txtRaza.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Raza";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 144);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(31, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Color";
-            // 
-            // txtColor
-            // 
-            this.txtColor.Location = new System.Drawing.Point(6, 161);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(370, 20);
-            this.txtColor.TabIndex = 5;
+            this.dtFechaNacimiento.CustomFormat = "";
+            this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFechaNacimiento.Location = new System.Drawing.Point(6, 211);
+            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
+            this.dtFechaNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtFechaNacimiento.TabIndex = 7;
             // 
             // label5
             // 
@@ -140,14 +85,69 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Fecha de Nacimiento";
             // 
-            // dtFechaNacimiento
+            // txtColor
             // 
-            this.dtFechaNacimiento.CustomFormat = "";
-            this.dtFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFechaNacimiento.Location = new System.Drawing.Point(6, 211);
-            this.dtFechaNacimiento.Name = "dtFechaNacimiento";
-            this.dtFechaNacimiento.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaNacimiento.TabIndex = 7;
+            this.txtColor.Location = new System.Drawing.Point(6, 161);
+            this.txtColor.Name = "txtColor";
+            this.txtColor.Size = new System.Drawing.Size(370, 20);
+            this.txtColor.TabIndex = 5;
+            // 
+            // txtRaza
+            // 
+            this.txtRaza.Location = new System.Drawing.Point(6, 121);
+            this.txtRaza.Name = "txtRaza";
+            this.txtRaza.Size = new System.Drawing.Size(370, 20);
+            this.txtRaza.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Color";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Raza";
+            // 
+            // txtespecie
+            // 
+            this.txtespecie.Location = new System.Drawing.Point(6, 81);
+            this.txtespecie.Name = "txtespecie";
+            this.txtespecie.Size = new System.Drawing.Size(370, 20);
+            this.txtespecie.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Especie";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Alias (Nombre)";
+            // 
+            // txtAlias
+            // 
+            this.txtAlias.Location = new System.Drawing.Point(6, 41);
+            this.txtAlias.Name = "txtAlias";
+            this.txtAlias.Size = new System.Drawing.Size(370, 20);
+            this.txtAlias.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -161,6 +161,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos del Cliente";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(13, 49);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(305, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -170,14 +178,6 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Nombre:";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(305, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(144, 350);
@@ -186,6 +186,7 @@
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmNewPet
             // 

@@ -37,5 +37,20 @@ namespace PetApp
             btnEditar.Text = "Editar";
         
     }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void frmMantoUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
