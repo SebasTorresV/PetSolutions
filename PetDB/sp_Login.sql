@@ -3,22 +3,30 @@
     @Email nvarchar(200),
     @Password nvarchar(70)
 AS
-    --Login
-    if @Option=1
-            begin
-                Select count(*) from
-            Usuarios
-            Where @Email = @Email
-    and PWDCOMPARE(@Password,Contrasena) = 1
+BEGIN
+    -- Autenticación de inicio de sesión
+    IF @Option = 1
+    BEGIN
+        -- Si el usuario existe, verifica la contraseña
+        IF EXISTS (
+            SELECT 1
+            FROM Usuarios
+            WHERE Email = @Email
+            AND Contrasena = PWDENCRYPT(@Password)
+        )
+        BEGIN
+            RETURN 1 -- Usuario y contraseña válidos
+        END
+    END
 
-    End
+    -- Creación de Usuarios (tu código actual)
+    IF @Option = 2
+    BEGIN
+        INSERT INTO Usuarios (Email, Contrasena)
+        VALUES (@Email, PWDENCRYPT(@Password))
+        RETURN 0
+    END
 
-    --Creación de Usuarios
-    if @Option=2
-        Begin
-        insert into Usuarios
-        (Email,Contrasena)
-        values(@Email,PWDENCRYPT(@Password))
-        End
+END
 
 RETURN 0
