@@ -5,9 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+
 
 namespace PetApp
 {
@@ -31,6 +33,16 @@ namespace PetApp
                 return; // Salir del método si las contraseñas no coinciden.
             }
 
+            // Validar formato de correo electrónico utilizando una expresión regular.
+            string correoElectronico = txtEmail.Text.Trim();
+            string emailPattern = @"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$";
+
+            if (!Regex.IsMatch(correoElectronico, emailPattern))
+            {
+                MessageBox.Show("Formato de correo electrónico no válido. Por favor, ingrese un correo electrónico válido.");
+                return; // Salir del método si el formato del correo electrónico es inválido.
+            }
+
             using (var db = new PetAppContext())
             {
                 // Convierte la contraseña de texto claro en bytes utilizando UTF-8.
@@ -38,7 +50,7 @@ namespace PetApp
 
                 var nuevoUsuario = new Usuarios()
                 {
-                    Email = txtEmail.Text,
+                    Email = correoElectronico, // Utiliza el correo electrónico validado.
                     Contrasena = contraseñaBytes // Almacena la contraseña como bytes.
                 };
 
@@ -46,7 +58,8 @@ namespace PetApp
                 db.SaveChanges();
 
                 MessageBox.Show("Nuevo usuario registrado exitosamente.");
-                //LOs TextBox quedan en blanco para poder agregar otro usuario
+
+                // Los TextBox quedan en blanco para poder agregar otro usuario
                 txtEmail.Text = "";
                 txtPass1.Text = "";
                 txtPass2.Text = "";

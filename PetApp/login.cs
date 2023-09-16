@@ -53,6 +53,8 @@ namespace PetApp
                 // Crea parámetros para el procedimiento almacenado.
                 var option = new SqlParameter("@Option", 1);
                 var usernameParam = new SqlParameter("@Email", username);
+
+                // No es necesario convertir la contraseña a UTF-16, simplemente pásala como texto.
                 var passwordParam = new SqlParameter("@Contrasena", password);
 
                 // Ejecuta el procedimiento almacenado para autenticar al usuario.
@@ -75,7 +77,5 @@ namespace PetApp
                 }
             }
         }
-
-
     }
 }

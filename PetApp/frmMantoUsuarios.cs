@@ -19,24 +19,29 @@ namespace PetApp
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
+
+
+
             if (grpEdit.Visible == true)
+            {
                 grpEdit.Visible = false;
-                    btnEditar.Text = "Editar";
+                btnEditar.Text = "Editar";
             }
             else
             {
                 grpEdit.Visible = true;
                 btnEditar.Text = "Cancelar";
             }
-            
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             grpEdit.Visible = false;
             btnEditar.Text = "Editar";
-        
-    }
+
+        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -51,6 +56,16 @@ namespace PetApp
         private void frmMantoUsuarios_Load(object sender, EventArgs e)
         {
 
+            using (var db = new PetAppContext())
+            {
+                // Consulta los usuarios desde la base de datos
+                var usuarios = db.Usuarios.ToList();
+
+                // Configura el origen de datos del DataGridView
+                grdData.DataSource = usuarios;
+
+
+            }
         }
     }
 }

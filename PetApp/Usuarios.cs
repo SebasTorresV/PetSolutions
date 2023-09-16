@@ -16,5 +16,10 @@ namespace PetApp
     {
         public string Email { get; set; }
         public byte[] Contrasena { get; set; }
+
+        public static implicit operator Usuarios(Usuarios v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
