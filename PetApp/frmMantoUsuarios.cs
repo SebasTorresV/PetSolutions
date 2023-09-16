@@ -19,7 +19,7 @@ namespace PetApp
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if(grpEdit.Visible==true) {
+            if (grpEdit.Visible == true)
                 grpEdit.Visible = false;
                     btnEditar.Text = "Editar";
             }
